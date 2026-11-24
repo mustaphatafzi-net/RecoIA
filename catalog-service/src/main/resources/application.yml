@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: catalog-service
+  datasource:
+    url: jdbc:h2:mem:catalogdb
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true              # affiche le SQL généré dans la console
+    hibernate:
+      ddl-auto: update          # crée les tables à partir de tes entités
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

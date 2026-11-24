@@ -1,0 +1,11 @@
+server:
+  port: 8761                  # port standard d'Eureka
+
+spring:
+  application:
+    name: discovery-server
+
+eureka:
+  client:
+    register-with-eureka: false   # l'annuaire ne s'inscrit pas dans lui-même
+    fetch-registry: false         # il n'a pas besoin de lire sa propre liste
