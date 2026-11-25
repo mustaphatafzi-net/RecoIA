@@ -1,0 +1,13 @@
+server:
+  port: 8888                    # port standard du config-server
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native              # lit des fichiers locaux, sans dépôt Git
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/config-repo   # où sont les fichiers à distribuer

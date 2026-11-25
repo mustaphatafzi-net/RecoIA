@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaServer   // transforme cette appli en annuaire de services
+@EnableEurekaServer   // // cette application EST l'annuaire
 public class DiscoveryServerApplication {
 
     public static void main(String[] args) {

@@ -1,0 +1,3 @@
+jwt:
+  secret: fo0ATkvyYbI7tVdWMXsEmAQ61+//3FqAbUvUaJOeP1N3N5Er4Jc0fXGGt7Q19bJw
+  expiration-ms: 3600000        # 1 heure

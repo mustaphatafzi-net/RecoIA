@@ -26,6 +26,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryResponse findById(Long id) {
+
         return categoryMapper.toResponse(getCategory(id));
     }
 

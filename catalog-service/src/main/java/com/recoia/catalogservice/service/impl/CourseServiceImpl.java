@@ -32,6 +32,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public CourseResponse findById(Long id) {
+
         return courseMapper.toResponse(getCourse(id));
     }
 
@@ -51,6 +52,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public void delete(Long id) {
+
         courseRepository.delete(getCourse(id));
     }
 

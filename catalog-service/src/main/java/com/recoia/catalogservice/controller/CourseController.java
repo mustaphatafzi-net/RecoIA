@@ -29,6 +29,7 @@ public class CourseController {
     @PostMapping                 // POST /courses
     @ResponseStatus(HttpStatus.CREATED)          // renvoie 201
     public CourseResponse create(@RequestBody CourseRequest request) {
+
         return courseService.create(request);
     }
 

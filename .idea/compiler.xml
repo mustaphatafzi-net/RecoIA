@@ -8,16 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="config-server" />
         <module name="discovery-server" />
       </profile>
-      <profile name="Annotation profile for catalog-service" enabled="true">
+      <profile name="Annotation profile for auth-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
         </processorPath>
+        <module name="auth-service (2)" />
         <module name="auth-service" />
         <module name="catalog-service" />
       </profile>
@@ -31,7 +32,9 @@
       <module name="RecoIA" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="auth-service" options="-parameters" />
+      <module name="auth-service (2)" options="-parameters" />
       <module name="catalog-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
     </option>
   </component>

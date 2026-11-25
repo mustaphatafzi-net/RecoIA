@@ -12,5 +12,5 @@ public record CourseRequest(
         String provider,
         CourseFormat format,
         String language,
-        Long categoryId
+        Long categoryId   // seulement l'id, pas l'objet Category
 ) {}
