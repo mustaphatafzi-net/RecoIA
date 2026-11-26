@@ -6,6 +6,12 @@ import jakarta.validation.constraints.Size;
 
 public record RegisterRequest(
 
+        @NotBlank(message = "Le prenom est obligatoire")
+        String firstName,
+
+        @NotBlank(message = "Le nom est obligatoire")
+        String lastName,
+
         @NotBlank(message = "L'email est obligatoire")
         @Email(message = "Format d'email invalide")
         String email,

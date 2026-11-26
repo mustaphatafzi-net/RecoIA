@@ -5,6 +5,9 @@ spring:
   application:
     name: api-gateway
 
+  config:
+    import: configserver:http://localhost:8888
+
   cloud:
     gateway:
       server:
@@ -16,6 +19,20 @@ spring:
                 - Path=/api/catalog/**
               filters:
                 - StripPrefix=2
+
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/api/auth/**
+              filters:
+                - StripPrefix=1
+
+            - id: student-service
+              uri: lb://student-service
+              predicates:
+                - Path=/api/students/**
+              filters:
+                - StripPrefix=1
 
 eureka:
   client:

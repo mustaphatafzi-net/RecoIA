@@ -19,6 +19,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -29,7 +35,14 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
+    // false = compte desactive : le login est refuse
+    @Column(nullable = false)
+    private Boolean enabled = true;
+
     private LocalDateTime createdAt;
+
+    // mise a jour a chaque login reussi
+    private LocalDateTime lastLoginAt;
 
     @PrePersist
     void onCreate() {

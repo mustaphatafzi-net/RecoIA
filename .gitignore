@@ -1,0 +1,17 @@
+# Fichiers compiles
+target/
+
+# Reglages personnels de l'IDE
+.idea/
+*.iml
+.vscode/
+
+# Divers
+*.log
+HELP.md
+.DS_Store
+
+# Angular (plus tard)
+node_modules/
+dist/
+.angular/
